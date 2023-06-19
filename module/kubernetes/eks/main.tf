@@ -78,13 +78,3 @@ resource "aws_iam_openid_connect_provider" "oidc_provider" {
     var.tags
   )
 }
-
-# Cloud9 인스턴스가 있는 rms-workner VPC에서 클러스터 접근 허가
-resource "aws_security_group_rule" "from_rms_worknet_to_eks" {
-  type              = "ingress"
-  from_port         = 443
-  to_port           = 443
-  protocol          = "tcp"
-  cidr_blocks       = ["10.251.0.0/16"]
-  security_group_id = aws_security_group.eks_security_group.id
-}
