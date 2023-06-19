@@ -53,3 +53,32 @@ module "nat_gateway" {
 	# Optional variables
 	# tags = {}
 }
+
+resource "aws_route53_zone" "uijong" {
+  name = "uijong.site"
+}
+
+resource "aws_acm_certificate" "uijong" {
+  domain_name = "*.uijong.site"
+  validation_method = "DNS"
+  lifecycle {
+    prevent_destroy = true
+  }
+}
+
+resource "aws_route53_record" "uijong_acm_validation" {
+  for_each = {
+    for dvo in aws_acm_certificate.uijong.domain_validation_options : dvo.domain_name => {
+      name   = dvo.resource_record_name
+      record = dvo.resource_record_value
+      type   = dvo.resource_record_type
+    }
+  }
+
+  allow_overwrite = true
+  name            = each.value.name
+  records         = [each.value.record]
+  ttl             = 300
+  type            = each.value.type
+  zone_id         = aws_route53_zone.uijong.zone_id
+}

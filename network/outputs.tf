@@ -15,3 +15,12 @@ output "private_subnet_ids" {
 output "nat_gateway_id" {
   value = module.nat_gateway.id
 }
+
+output "ns_record" {
+  value = aws_route53_zone.uijong.name_servers
+  description = "생성된 도메인의 NS Record"
+}
+
+output "uijong_acm_arn" {
+  value = aws_acm_certificate.uijong.arn
+}
