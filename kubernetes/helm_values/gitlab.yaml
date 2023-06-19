@@ -1,0 +1,17 @@
+global:
+  hosts:
+    domain: uijong.site
+    https: false
+  ingress:
+    apiVersion: "networking.k8s.io/v1"
+    configureCertmanager: false
+    provider: nginx
+    class: nginx
+    tls:
+      enabled: false
+    path: /
+    pathType: Prefix
+gitlab-runner:
+  install: false
+nginx-ingress:
+  enabled: false
