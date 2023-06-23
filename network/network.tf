@@ -82,3 +82,17 @@ resource "aws_route53_record" "uijong_acm_validation" {
   type            = each.value.type
   zone_id         = aws_route53_zone.uijong.zone_id
 }
+
+# Vault ALB를 향하는 Route53 Record 생성
+## module 이용하여 vault 생성 후 Record 생성해야함
+resource "aws_route53_record" "vault_alb" {
+	zone_id = aws_route53_zone.uijong.zone_id
+	name 	= "vault.uijong.site"
+	type	= "A"
+
+	alias {
+		name = data.terraform_remote_state.vault.outputs.vault_lb_domain
+		zone_id = data.terraform_remote_state.vault.outputs.vault_lb_zone_id
+		evaluate_target_health = true
+	} 
+}
