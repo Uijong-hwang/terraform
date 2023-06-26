@@ -3,7 +3,7 @@
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | 4.30.0 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | 4.67.0 |
 
 ## Usage
 해당 모듈의 기본 사용법은 아래와 같습니다
@@ -30,13 +30,13 @@ module "example" {
 
 | Name | Type |
 |------|------|
-| [aws_eks_node_group.this](https://registry.terraform.io/providers/hashicorp/aws/4.30.0/docs/resources/eks_node_group) | resource |
-| [aws_iam_role.this](https://registry.terraform.io/providers/hashicorp/aws/4.30.0/docs/resources/iam_role) | resource |
-| [aws_iam_role_policy_attachment.this-AmazonEC2ContainerRegistryReadOnly](https://registry.terraform.io/providers/hashicorp/aws/4.30.0/docs/resources/iam_role_policy_attachment) | resource |
-| [aws_iam_role_policy_attachment.this-AmazonEKSWorkerNodePolicy](https://registry.terraform.io/providers/hashicorp/aws/4.30.0/docs/resources/iam_role_policy_attachment) | resource |
-| [aws_iam_role_policy_attachment.this-AmazonEKS_CNI_Policy](https://registry.terraform.io/providers/hashicorp/aws/4.30.0/docs/resources/iam_role_policy_attachment) | resource |
-| [aws_iam_role_policy_attachment.this-AmazonSSMManagedInstanceCore](https://registry.terraform.io/providers/hashicorp/aws/4.30.0/docs/resources/iam_role_policy_attachment) | resource |
-| [aws_launch_template.this](https://registry.terraform.io/providers/hashicorp/aws/4.30.0/docs/resources/launch_template) | resource |
+| [aws_eks_node_group.this](https://registry.terraform.io/providers/hashicorp/aws/4.67.0/docs/resources/eks_node_group) | resource |
+| [aws_iam_role.this](https://registry.terraform.io/providers/hashicorp/aws/4.67.0/docs/resources/iam_role) | resource |
+| [aws_iam_role_policy_attachment.this-AmazonEC2ContainerRegistryReadOnly](https://registry.terraform.io/providers/hashicorp/aws/4.67.0/docs/resources/iam_role_policy_attachment) | resource |
+| [aws_iam_role_policy_attachment.this-AmazonEKSWorkerNodePolicy](https://registry.terraform.io/providers/hashicorp/aws/4.67.0/docs/resources/iam_role_policy_attachment) | resource |
+| [aws_iam_role_policy_attachment.this-AmazonEKS_CNI_Policy](https://registry.terraform.io/providers/hashicorp/aws/4.67.0/docs/resources/iam_role_policy_attachment) | resource |
+| [aws_iam_role_policy_attachment.this-AmazonSSMManagedInstanceCore](https://registry.terraform.io/providers/hashicorp/aws/4.67.0/docs/resources/iam_role_policy_attachment) | resource |
+| [aws_launch_template.this](https://registry.terraform.io/providers/hashicorp/aws/4.67.0/docs/resources/launch_template) | resource |
 
 ## Inputs
 

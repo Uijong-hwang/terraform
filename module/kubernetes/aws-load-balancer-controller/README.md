@@ -3,9 +3,9 @@
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | 4.30.0 |
-| <a name="requirement_helm"></a> [helm](#requirement\_helm) | 2.6.0 |
-| <a name="requirement_kubernetes"></a> [kubernetes](#requirement\_kubernetes) | 2.13.1 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | 4.67.0 |
+| <a name="requirement_helm"></a> [helm](#requirement\_helm) | 2.10.1 |
+| <a name="requirement_kubernetes"></a> [kubernetes](#requirement\_kubernetes) | 2.21.1 |
 
 ## Usage
 해당 모듈의 기본 사용법은 아래와 같습니다
@@ -29,10 +29,10 @@ module "example" {
 
 | Name | Type |
 |------|------|
-| [aws_ec2_tag.common](https://registry.terraform.io/providers/hashicorp/aws/4.30.0/docs/resources/ec2_tag) | resource |
-| [aws_ec2_tag.private](https://registry.terraform.io/providers/hashicorp/aws/4.30.0/docs/resources/ec2_tag) | resource |
-| [aws_ec2_tag.public](https://registry.terraform.io/providers/hashicorp/aws/4.30.0/docs/resources/ec2_tag) | resource |
-| [helm_release.this](https://registry.terraform.io/providers/hashicorp/helm/2.6.0/docs/resources/release) | resource |
+| [aws_ec2_tag.common](https://registry.terraform.io/providers/hashicorp/aws/4.67.0/docs/resources/ec2_tag) | resource |
+| [aws_ec2_tag.private](https://registry.terraform.io/providers/hashicorp/aws/4.67.0/docs/resources/ec2_tag) | resource |
+| [aws_ec2_tag.public](https://registry.terraform.io/providers/hashicorp/aws/4.67.0/docs/resources/ec2_tag) | resource |
+| [helm_release.this](https://registry.terraform.io/providers/hashicorp/helm/2.10.1/docs/resources/release) | resource |
 | [http_http.policy_document](https://registry.terraform.io/providers/hashicorp/http/latest/docs/data-sources/http) | data source |
 
 ## Inputs

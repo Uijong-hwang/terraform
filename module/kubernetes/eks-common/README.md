@@ -3,9 +3,9 @@
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | 4.30.0 |
-| <a name="requirement_kubernetes"></a> [kubernetes](#requirement\_kubernetes) | 2.13.1 |
-| <a name="requirement_tls"></a> [tls](#requirement\_tls) | 4.0.3 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | 4.67.0 |
+| <a name="requirement_kubernetes"></a> [kubernetes](#requirement\_kubernetes) | 2.21.1 |
+| <a name="requirement_tls"></a> [tls](#requirement\_tls) | 4.0.4 |
 
 ## Usage
 해당 모듈의 기본 사용법은 아래와 같습니다
@@ -41,7 +41,7 @@ module "example" {
 | [helm_release.external_dns](https://registry.terraform.io/providers/hashicorp/helm/latest/docs/resources/release) | resource |
 | [helm_release.metric_server](https://registry.terraform.io/providers/hashicorp/helm/latest/docs/resources/release) | resource |
 | [helm_release.nginx_ingress_controller](https://registry.terraform.io/providers/hashicorp/helm/latest/docs/resources/release) | resource |
-| [aws_region.current](https://registry.terraform.io/providers/hashicorp/aws/4.30.0/docs/data-sources/region) | data source |
+| [aws_region.current](https://registry.terraform.io/providers/hashicorp/aws/4.67.0/docs/data-sources/region) | data source |
 
 ## Inputs
 

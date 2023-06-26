@@ -3,7 +3,7 @@
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | 4.30.0 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | 4.67.0 |
 
 ## Usage
 해당 모듈의 기본 사용법은 아래와 같습니다
@@ -24,8 +24,8 @@ module "example" {
 
 | Name | Type |
 |------|------|
-| [aws_eip.this](https://registry.terraform.io/providers/hashicorp/aws/4.30.0/docs/resources/eip) | resource |
-| [aws_nat_gateway.this](https://registry.terraform.io/providers/hashicorp/aws/4.30.0/docs/resources/nat_gateway) | resource |
+| [aws_eip.this](https://registry.terraform.io/providers/hashicorp/aws/4.67.0/docs/resources/eip) | resource |
+| [aws_nat_gateway.this](https://registry.terraform.io/providers/hashicorp/aws/4.67.0/docs/resources/nat_gateway) | resource |
 
 ## Inputs
 

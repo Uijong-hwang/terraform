@@ -3,8 +3,8 @@
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | 4.30.0 |
-| <a name="requirement_kubernetes"></a> [kubernetes](#requirement\_kubernetes) | 2.13.1 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | 4.67.0 |
+| <a name="requirement_kubernetes"></a> [kubernetes](#requirement\_kubernetes) | 2.21.1 |
 
 ## Usage
 해당 모듈의 기본 사용법은 아래와 같습니다
@@ -25,12 +25,12 @@ module "example" {
 
 | Name | Type |
 |------|------|
-| [aws_eks_addon.coredns](https://registry.terraform.io/providers/hashicorp/aws/4.30.0/docs/resources/eks_addon) | resource |
-| [aws_eks_addon.ebs_csi_controller](https://registry.terraform.io/providers/hashicorp/aws/4.30.0/docs/resources/eks_addon) | resource |
-| [aws_eks_addon.vpc_cni](https://registry.terraform.io/providers/hashicorp/aws/4.30.0/docs/resources/eks_addon) | resource |
-| [kubernetes_annotations.default_storageclass](https://registry.terraform.io/providers/hashicorp/kubernetes/2.13.1/docs/resources/annotations) | resource |
-| [kubernetes_storage_class.ebs_sc](https://registry.terraform.io/providers/hashicorp/kubernetes/2.13.1/docs/resources/storage_class) | resource |
-| [kubernetes_storage_class.ebs_sc_retain](https://registry.terraform.io/providers/hashicorp/kubernetes/2.13.1/docs/resources/storage_class) | resource |
+| [aws_eks_addon.coredns](https://registry.terraform.io/providers/hashicorp/aws/4.67.0/docs/resources/eks_addon) | resource |
+| [aws_eks_addon.ebs_csi_controller](https://registry.terraform.io/providers/hashicorp/aws/4.67.0/docs/resources/eks_addon) | resource |
+| [aws_eks_addon.vpc_cni](https://registry.terraform.io/providers/hashicorp/aws/4.67.0/docs/resources/eks_addon) | resource |
+| [kubernetes_annotations.default_storageclass](https://registry.terraform.io/providers/hashicorp/kubernetes/2.21.1/docs/resources/annotations) | resource |
+| [kubernetes_storage_class.ebs_sc](https://registry.terraform.io/providers/hashicorp/kubernetes/2.21.1/docs/resources/storage_class) | resource |
+| [kubernetes_storage_class.ebs_sc_retain](https://registry.terraform.io/providers/hashicorp/kubernetes/2.21.1/docs/resources/storage_class) | resource |
 
 ## Inputs
 

@@ -3,7 +3,7 @@
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | 4.30.0 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | 4.67.0 |
 
 ## Usage
 해당 모듈의 기본 사용법은 아래와 같습니다
@@ -30,14 +30,14 @@ module "example" {
 
 | Name | Type |
 |------|------|
-| [aws_route.internet](https://registry.terraform.io/providers/hashicorp/aws/4.30.0/docs/resources/route) | resource |
-| [aws_route.peering](https://registry.terraform.io/providers/hashicorp/aws/4.30.0/docs/resources/route) | resource |
-| [aws_route_table.this](https://registry.terraform.io/providers/hashicorp/aws/4.30.0/docs/resources/route_table) | resource |
-| [aws_route_table_association.this](https://registry.terraform.io/providers/hashicorp/aws/4.30.0/docs/resources/route_table_association) | resource |
-| [aws_subnet.this](https://registry.terraform.io/providers/hashicorp/aws/4.30.0/docs/resources/subnet) | resource |
-| [aws_vpc_peering_connection.pc](https://registry.terraform.io/providers/hashicorp/aws/4.30.0/docs/data-sources/vpc_peering_connection) | data source |
-| [aws_vpc_peering_connections.inbound_pcs](https://registry.terraform.io/providers/hashicorp/aws/4.30.0/docs/data-sources/vpc_peering_connections) | data source |
-| [aws_vpc_peering_connections.outbound_pcs](https://registry.terraform.io/providers/hashicorp/aws/4.30.0/docs/data-sources/vpc_peering_connections) | data source |
+| [aws_route.internet](https://registry.terraform.io/providers/hashicorp/aws/4.67.0/docs/resources/route) | resource |
+| [aws_route.peering](https://registry.terraform.io/providers/hashicorp/aws/4.67.0/docs/resources/route) | resource |
+| [aws_route_table.this](https://registry.terraform.io/providers/hashicorp/aws/4.67.0/docs/resources/route_table) | resource |
+| [aws_route_table_association.this](https://registry.terraform.io/providers/hashicorp/aws/4.67.0/docs/resources/route_table_association) | resource |
+| [aws_subnet.this](https://registry.terraform.io/providers/hashicorp/aws/4.67.0/docs/resources/subnet) | resource |
+| [aws_vpc_peering_connection.pc](https://registry.terraform.io/providers/hashicorp/aws/4.67.0/docs/data-sources/vpc_peering_connection) | data source |
+| [aws_vpc_peering_connections.inbound_pcs](https://registry.terraform.io/providers/hashicorp/aws/4.67.0/docs/data-sources/vpc_peering_connections) | data source |
+| [aws_vpc_peering_connections.outbound_pcs](https://registry.terraform.io/providers/hashicorp/aws/4.67.0/docs/data-sources/vpc_peering_connections) | data source |
 
 ## Inputs
 

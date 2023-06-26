@@ -3,9 +3,9 @@
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | 4.30.0 |
-| <a name="requirement_kubernetes"></a> [kubernetes](#requirement\_kubernetes) | 2.13.1 |
-| <a name="requirement_tls"></a> [tls](#requirement\_tls) | 4.0.3 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | 4.67.0 |
+| <a name="requirement_kubernetes"></a> [kubernetes](#requirement\_kubernetes) | 2.21.1 |
+| <a name="requirement_tls"></a> [tls](#requirement\_tls) | 4.0.4 |
 
 ## Usage
 해당 모듈의 기본 사용법은 아래와 같습니다
@@ -21,6 +21,8 @@ module "example" {
 	vpc_subnet_ids = 
 
 	# Optional variables
+	endpoint_private_access = false
+	endpoint_public_access = true
 	tags = {}
 }
 ```
@@ -28,15 +30,14 @@ module "example" {
 
 | Name | Type |
 |------|------|
-| [aws_eks_cluster.this](https://registry.terraform.io/providers/hashicorp/aws/4.30.0/docs/resources/eks_cluster) | resource |
-| [aws_iam_openid_connect_provider.oidc_provider](https://registry.terraform.io/providers/hashicorp/aws/4.30.0/docs/resources/iam_openid_connect_provider) | resource |
-| [aws_iam_role.eks_service_role](https://registry.terraform.io/providers/hashicorp/aws/4.30.0/docs/resources/iam_role) | resource |
-| [aws_iam_role_policy_attachment.eks_service_role](https://registry.terraform.io/providers/hashicorp/aws/4.30.0/docs/resources/iam_role_policy_attachment) | resource |
-| [aws_security_group.eks_security_group](https://registry.terraform.io/providers/hashicorp/aws/4.30.0/docs/resources/security_group) | resource |
-| [aws_security_group_rule.from_rms_worknet_to_eks](https://registry.terraform.io/providers/hashicorp/aws/4.30.0/docs/resources/security_group_rule) | resource |
-| [aws_caller_identity.current](https://registry.terraform.io/providers/hashicorp/aws/4.30.0/docs/data-sources/caller_identity) | data source |
-| [aws_iam_session_context.current](https://registry.terraform.io/providers/hashicorp/aws/4.30.0/docs/data-sources/iam_session_context) | data source |
-| [tls_certificate.this](https://registry.terraform.io/providers/hashicorp/tls/4.0.3/docs/data-sources/certificate) | data source |
+| [aws_eks_cluster.this](https://registry.terraform.io/providers/hashicorp/aws/4.67.0/docs/resources/eks_cluster) | resource |
+| [aws_iam_openid_connect_provider.oidc_provider](https://registry.terraform.io/providers/hashicorp/aws/4.67.0/docs/resources/iam_openid_connect_provider) | resource |
+| [aws_iam_role.eks_service_role](https://registry.terraform.io/providers/hashicorp/aws/4.67.0/docs/resources/iam_role) | resource |
+| [aws_iam_role_policy_attachment.eks_service_role](https://registry.terraform.io/providers/hashicorp/aws/4.67.0/docs/resources/iam_role_policy_attachment) | resource |
+| [aws_security_group.eks_security_group](https://registry.terraform.io/providers/hashicorp/aws/4.67.0/docs/resources/security_group) | resource |
+| [aws_caller_identity.current](https://registry.terraform.io/providers/hashicorp/aws/4.67.0/docs/data-sources/caller_identity) | data source |
+| [aws_iam_session_context.current](https://registry.terraform.io/providers/hashicorp/aws/4.67.0/docs/data-sources/iam_session_context) | data source |
+| [tls_certificate.this](https://registry.terraform.io/providers/hashicorp/tls/4.0.4/docs/data-sources/certificate) | data source |
 
 ## Inputs
 
@@ -46,6 +47,8 @@ module "example" {
 | <a name="input_cluster_version"></a> [cluster\_version](#input\_cluster\_version) | EKS 클러스터 버전 | `string` | n/a | yes |
 | <a name="input_vpc_id"></a> [vpc\_id](#input\_vpc\_id) | EKS 클러스터가 사용할 VPC | `string` | n/a | yes |
 | <a name="input_vpc_subnet_ids"></a> [vpc\_subnet\_ids](#input\_vpc\_subnet\_ids) | EKS 클러스터의 ENI가 생성될 서브넷 목록 | `list(string)` | n/a | yes |
+| <a name="input_endpoint_private_access"></a> [endpoint\_private\_access](#input\_endpoint\_private\_access) | EKS 클러스터 엔드포인트 Private 엑세스 | `bool` | `false` | no |
+| <a name="input_endpoint_public_access"></a> [endpoint\_public\_access](#input\_endpoint\_public\_access) | EKS 클러스터 엔드포인트 Public 엑세스 | `bool` | `true` | no |
 | <a name="input_tags"></a> [tags](#input\_tags) | 생성될 리소스에 부여할 태그 목록 | `map(string)` | `{}` | no |
 
 ## Outputs
