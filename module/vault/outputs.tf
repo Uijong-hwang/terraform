@@ -7,3 +7,8 @@ output "vault_lb_zone_id" {
   value       = aws_lb.vault.zone_id
   description = "Vault ALB Zone ID"
 }
+
+output "vault_active_instance_id" {
+  value       = aws_instance.vault_instance_active.id
+  description = "Vault Active Instance ID"
+}
