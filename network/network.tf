@@ -54,21 +54,21 @@ module "nat_gateway" {
 	# tags = {}
 }
 
-resource "aws_route53_zone" "uijong" {
-  name = "uijong.site"
+resource "aws_route53_zone" "this" {
+  name = "papershouse.site"
 }
 
-resource "aws_acm_certificate" "uijong" {
-  domain_name = "*.uijong.site"
+resource "aws_acm_certificate" "this" {
+  domain_name = "*.papershouse.site"
   validation_method = "DNS"
   lifecycle {
-    prevent_destroy = true
+    prevent_destroy = false
   }
 }
 
-resource "aws_route53_record" "uijong_acm_validation" {
+resource "aws_route53_record" "acm_validation" {
   for_each = {
-    for dvo in aws_acm_certificate.uijong.domain_validation_options : dvo.domain_name => {
+    for dvo in aws_acm_certificate.this.domain_validation_options : dvo.domain_name => {
       name   = dvo.resource_record_name
       record = dvo.resource_record_value
       type   = dvo.resource_record_type
@@ -80,19 +80,5 @@ resource "aws_route53_record" "uijong_acm_validation" {
   records         = [each.value.record]
   ttl             = 300
   type            = each.value.type
-  zone_id         = aws_route53_zone.uijong.zone_id
-}
-
-# Vault ALB를 향하는 Route53 Record 생성
-## module 이용하여 vault 생성 후 Record 생성해야함
-resource "aws_route53_record" "vault_alb" {
-	zone_id = aws_route53_zone.uijong.zone_id
-	name 	= "vault.uijong.site"
-	type	= "A"
-
-	alias {
-		name = data.terraform_remote_state.vault.outputs.vault_lb_domain
-		zone_id = data.terraform_remote_state.vault.outputs.vault_lb_zone_id
-		evaluate_target_health = true
-	} 
+  zone_id         = aws_route53_zone.this.zone_id
 }

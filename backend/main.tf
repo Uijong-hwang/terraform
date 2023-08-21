@@ -8,6 +8,8 @@ terraform {
   }
 }
 
+## 초기 진행시 주석 처리후 terraform init 후에 백엔드 설정 진행 해야함
+## 주석 해제 후 terraform init -migrate-state 
 # backend configuration
 terraform {
   backend "s3" {

@@ -1,3 +1,5 @@
+## Dependancy 문제가 있기 때문에 각 모듈을 순차적으로 하나씩 apply 해야함
+
 module "eks" {
   source = "../module/kubernetes/eks"
 
@@ -68,10 +70,10 @@ module "eks_common" {
   aws_load_balancer_controller_app_version   = "v2.5.2"
   nginx_ingress_controller_chart_version     = "4.7.0"
 
-  external_dns_domain_filters = ["uijong.site"]
+  external_dns_domain_filters = ["papershouse.site"]
   external_dns_role_arn       = module.irsa_external_dns.role_arn
   hostedzone_type             = "public"
-  acm_certificate_arn         = data.terraform_remote_state.network.outputs.uijong_acm_arn
+  acm_certificate_arn         = data.terraform_remote_state.network.outputs.acm_arn
 
   depends_on = [
     module.nodegroup

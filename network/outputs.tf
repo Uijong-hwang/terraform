@@ -17,10 +17,16 @@ output "nat_gateway_id" {
 }
 
 output "ns_record" {
-  value = aws_route53_zone.uijong.name_servers
+  value = aws_route53_zone.this
   description = "생성된 도메인의 NS Record"
 }
 
-output "uijong_acm_arn" {
-  value = aws_acm_certificate.uijong.arn
+output "acm_arn" {
+  value = aws_acm_certificate.this.arn
+  description = "생성된 ACM ARN"
+}
+
+output "zone_id" {
+  value = aws_route53_zone.this.zone_id
+  description = "생성된 route53 호스팅 zone id"
 }
