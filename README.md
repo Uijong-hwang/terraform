@@ -221,7 +221,7 @@ s3_bucket_arn = "arn:aws:s3:::saltware-tfstate-bucket-2"
 
 - AWS Web console에서 확인한 예시
 
-![Untitled](Terraform%20state%20%E1%84%80%E1%85%AA%E1%86%AB%E1%84%85%E1%85%B5%20a0c11bc4fc2447e696c166b2bf9a8ed9/Untitled.png)
+![Untitled](capture/Untitled.png)
 
  **3.3.2 AWS CLI 이용**
 
@@ -233,7 +233,7 @@ aws s3 ls <S3 Bucket Name>/global/s3/
 
 - AWS CLI 에서 확인한 예시
 
-![Untitled](Terraform%20state%20%E1%84%80%E1%85%AA%E1%86%AB%E1%84%85%E1%85%B5%20a0c11bc4fc2447e696c166b2bf9a8ed9/Untitled%201.png)
+![Untitled](capture/Untitled1.png)
 
 ## 4. Backend 설정 해제
 
@@ -271,13 +271,13 @@ S3 Backend 설정을 해제하여 다시 local에서 state 파일을 관리하�
 
 - 예시
 
-![Untitled](Terraform%20state%20%E1%84%80%E1%85%AA%E1%86%AB%E1%84%85%E1%85%B5%20a0c11bc4fc2447e696c166b2bf9a8ed9/Untitled%202.png)
+![Untitled](capture/Untitled2.png)
 
 **4.3 Backend 위한 리소스 삭제**
 
 S3버킷을 삭제하기 전에 생성된 terraform.tfstate 파일을 삭제 해야 합니다. versioning을 활성화 했기 때문에 파일의 버전을 전부 삭제 해야 합니다. 
 
-![Untitled](Terraform%20state%20%E1%84%80%E1%85%AA%E1%86%AB%E1%84%85%E1%85%B5%20a0c11bc4fc2447e696c166b2bf9a8ed9/Untitled%203.png)
+![Untitled](capture/Untitled3.png)
 
 그 후 S3 Bucket, DynamoDB의 resource template를 삭제하거나 주석 처리 합니다.
 
